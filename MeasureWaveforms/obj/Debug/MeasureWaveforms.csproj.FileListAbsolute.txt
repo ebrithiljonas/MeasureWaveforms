@@ -1,0 +1,30 @@
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csprojResolveAssemblyReference.cache
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.ResolveComReference.cache
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.MeasureWaveforms.resources
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.Properties.Resources.resources
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.GenerateResource.Cache
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe.config
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.pdb
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.exe
+\\fs003\stud\jhalbeisen\eigene_dateien\visual studio 2017\Projects\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.pdb
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe.config
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.pdb
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csprojResolveAssemblyReference.cache
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.ResolveComReference.cache
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.MeasureWaveforms.resources
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.Properties.Resources.resources
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.GenerateResource.Cache
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.exe
+C:\Users\ebrit\OneDrive - NTB\Systemtechnik Studium\Software\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.pdb
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe.config
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.exe
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\bin\Debug\MeasureWaveforms.pdb
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csprojResolveAssemblyReference.cache
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.ResolveComReference.cache
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.MeasureWaveforms.resources
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.Properties.Resources.resources
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.csproj.GenerateResource.Cache
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.exe
+\\fs003\stud\jhalbeisen\Downloads\MeasureWaveforms\MeasureWaveforms\obj\Debug\MeasureWaveforms.pdb
