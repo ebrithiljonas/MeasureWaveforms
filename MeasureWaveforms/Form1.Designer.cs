@@ -59,8 +59,12 @@
             this.btStart = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.lbOutputF = new System.Windows.Forms.Label();
-            this.lbInputF = new System.Windows.Forms.Label();
+            this.lbOutputV = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lbInputV = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.lbPhase = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,6 +77,8 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -356,7 +362,7 @@
             this.groupBox6.Controls.Add(this.lbOutputF);
             this.groupBox6.Location = new System.Drawing.Point(12, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(275, 52);
+            this.groupBox6.Size = new System.Drawing.Size(150, 52);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Frequency [Hz]";
@@ -371,32 +377,73 @@
             this.lbOutputF.TabIndex = 0;
             this.lbOutputF.Text = "0";
             // 
-            // lbInputF
+            // lbOutputV
             // 
-            this.lbInputF.AutoSize = true;
-            this.lbInputF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInputF.Location = new System.Drawing.Point(6, 16);
-            this.lbInputF.Name = "lbInputF";
-            this.lbInputF.Size = new System.Drawing.Size(54, 25);
-            this.lbInputF.TabIndex = 0;
-            this.lbInputF.Text = "0.00";
+            this.lbOutputV.AutoSize = true;
+            this.lbOutputV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOutputV.Location = new System.Drawing.Point(6, 16);
+            this.lbOutputV.Name = "lbOutputV";
+            this.lbOutputV.Size = new System.Drawing.Size(54, 25);
+            this.lbOutputV.TabIndex = 0;
+            this.lbOutputV.Text = "0.00";
             // 
             // groupBox7
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.lbInputF);
-            this.groupBox7.Location = new System.Drawing.Point(466, 12);
+            this.groupBox7.Controls.Add(this.lbOutputV);
+            this.groupBox7.Location = new System.Drawing.Point(324, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(275, 52);
+            this.groupBox7.Size = new System.Drawing.Size(150, 52);
             this.groupBox7.TabIndex = 12;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Voltage Peak Peak [V]";
+            this.groupBox7.Text = "Output Voltage [V] C2";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lbInputV);
+            this.groupBox8.Location = new System.Drawing.Point(168, 12);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(150, 52);
+            this.groupBox8.TabIndex = 13;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Input Voltage [V] C1";
+            // 
+            // lbInputV
+            // 
+            this.lbInputV.AutoSize = true;
+            this.lbInputV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInputV.Location = new System.Drawing.Point(6, 16);
+            this.lbInputV.Name = "lbInputV";
+            this.lbInputV.Size = new System.Drawing.Size(54, 25);
+            this.lbInputV.TabIndex = 0;
+            this.lbInputV.Text = "0.00";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.lbPhase);
+            this.groupBox9.Location = new System.Drawing.Point(480, 12);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(150, 52);
+            this.groupBox9.TabIndex = 13;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Phase [°]";
+            // 
+            // lbPhase
+            // 
+            this.lbPhase.AutoSize = true;
+            this.lbPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhase.Location = new System.Drawing.Point(6, 16);
+            this.lbPhase.Name = "lbPhase";
+            this.lbPhase.Size = new System.Drawing.Size(54, 25);
+            this.lbPhase.TabIndex = 0;
+            this.lbPhase.Text = "0.00";
             // 
             // MeasureWaveforms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 550);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -427,6 +474,10 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -459,8 +510,12 @@
         private System.Windows.Forms.Button btStart;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lbOutputF;
-        private System.Windows.Forms.Label lbInputF;
+        private System.Windows.Forms.Label lbOutputV;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label lbInputV;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label lbPhase;
     }
 }
 

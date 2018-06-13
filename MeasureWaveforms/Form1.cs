@@ -17,7 +17,7 @@ namespace MeasureWaveforms
             chartWaveform.DataSource = Datapoints;
 
             chartWaveform.Series[0].XValueMember = "inputFrequency";
-            chartWaveform.Series[0].YValueMembers = "outputFrequency";
+            chartWaveform.Series[0].YValueMembers = "outputVoltage";
             chartWaveform.Series[0].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             chartWaveform.Series[0].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             chartWaveform.DataBind();
@@ -104,10 +104,10 @@ namespace MeasureWaveforms
 
         List<DataPoint> Datapoints = new List<DataPoint>();
 
-        private void addDatapoint(Double X, Double Y)
+        private void addDatapoint(Double X, Double Y, Double inputV, Double angle)
         {
 
-            DataPoint d = new DataPoint(X,Y);
+            DataPoint d = new DataPoint(X,Y,inputV,angle);
             Datapoints.Add(d);
             chartWaveform.DataBind();
 
@@ -130,14 +130,20 @@ namespace MeasureWaveforms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Double f = getFrequency();
-            addDatapoint(frequency, f);
-            lbInputF.Text = f.ToString("N2");
+
+            setTimebase(frequency);
+
+            Double inV = getInputVoltage();
+            Double outV = getOutputVoltage();
+            Double ph = getPhase();
+            addDatapoint(frequency, outV, inV, ph);
+            lbOutputV.Text = outV.ToString("N2");
+            lbInputV.Text = inV.ToString("N2");
+            lbPhase.Text = ph.ToString("N2");
             lbOutputF.Text = frequency.ToString("G");
             if (frequency >= endF)
             {
                 timer1.Stop();
-
             }
             else
             {
@@ -145,6 +151,13 @@ namespace MeasureWaveforms
                 setFrequency(frequency);
             }
 
+        }
+
+        private void setTimebase(double fr)
+        {
+            Double t = 1 / fr;
+            t = t * 10;
+            instrument.IO.WriteString(":TIMebase:RANGe " + t.ToString("R3"));
         }
 
         private void btStop_Click(object sender, EventArgs e)
@@ -171,44 +184,6 @@ namespace MeasureWaveforms
 
         }
 
-        private void exportCSV()
-        {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = ".csv";
-            savefile.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
-
-            StringBuilder csv = new StringBuilder();
-
-            if (savefile.ShowDialog() == DialogResult.OK)
-            {
-                String name = System.IO.Path.GetFileNameWithoutExtension(savefile.FileName);
-
-                csv.AppendLine(name);
-                csv.AppendLine("\"Frequency [Hz]\",\"VPP [V]\"");
-
-                foreach (DataPoint p in Datapoints)
-                {
-                    String X = p.inputFrequency.ToString("G");
-                    String Y = p.outputFrequency.ToString("N4");
-
-                    String s = string.Format("{0},{1}", X, Y);
-
-                    csv.AppendLine(s);
-                }
-
-                try
-                {
-                    System.IO.File.WriteAllText(savefile.FileName, csv.ToString());
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-            }
-
-        }
-
         private void exportExcel()
         {
             SaveFileDialog savefile = new SaveFileDialog();
@@ -224,14 +199,21 @@ namespace MeasureWaveforms
                 Worksheet xlWorkSheet = (Worksheet)xlWorkBook.Worksheets.get_Item(1);
                 xlWorkSheet.Cells[1, 1] = name;
                 xlWorkSheet.Cells[2, 1] = "Frequency [Hz]";
-                xlWorkSheet.Cells[2, 2] = "VPP [V]";
+                xlWorkSheet.Cells[2, 2] = "V Input [V]";
+                xlWorkSheet.Cells[2, 3] = "V Output [V]";
+                xlWorkSheet.Cells[2, 4] = "Phase [°]";
                 int count = 3;
                 foreach (DataPoint p in Datapoints)
                 {
-                    String X = p.inputFrequency.ToString("G");
-                    String Y = p.outputFrequency.ToString("N4");
-                    xlWorkSheet.Cells[count, 1] = X;
-                    xlWorkSheet.Cells[count, 2] = Y;
+                    String freq = p.inputFrequency.ToString("G");
+                    String outV = p.outputVoltage.ToString("N4");
+                    String inV = p.inputVoltage.ToString("N4");
+                    String ph = p.phase.ToString("N2");
+                    xlWorkSheet.Cells[count, 1] = freq;
+                    xlWorkSheet.Cells[count, 2] = inV;
+                    xlWorkSheet.Cells[count, 3] = outV;
+                    xlWorkSheet.Cells[count, 4] = ph;
+                    count++;
                 }
 
                 xlWorkBook.SaveAs(savefile.FileName);
@@ -249,17 +231,62 @@ namespace MeasureWaveforms
 
         private void MeasureWaveforms_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private Double getFrequency()
+        private Double getOutputVoltage()
         {
-            Double F = 0;
+            try
+            {
+                Double F = 0;
 
-            instrument.WriteString("MEASure:SOURce CHANnel1");
-            instrument.WriteString(":MEASure:VPP?");
-            F = instrument.ReadNumber();
-            return F;
+                //instrument.WriteString("MEASure:SOURce CHANnel2");
+                instrument.WriteString(":MEASure:VRMS? CYCLe,AC,CHANnel2");
+                F = instrument.ReadNumber();
+                return F;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+        }
+
+        private Double getInputVoltage()
+        {
+            try
+            {
+                Double F = 0;
+
+                //instrument.WriteString("MEASure:SOURce CHANnel1");
+                instrument.WriteString(":MEASure:VRMS? CYCLe,AC,CHANnel1");
+                F = instrument.ReadNumber();
+                return F;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+            
+        }
+
+        private Double getPhase()
+        {
+            try
+            {
+                Double F = 0;
+
+                //instrument.WriteString("MEASure:SOURce CHANnel1");
+                instrument.WriteString(":MEASure:PHASe? CHANnel1,CHANnel2");
+                F = instrument.ReadNumber();
+                return F;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+            
         }
     }
 }

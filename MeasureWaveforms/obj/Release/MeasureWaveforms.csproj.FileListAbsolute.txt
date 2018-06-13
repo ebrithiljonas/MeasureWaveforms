@@ -1,0 +1,10 @@
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\bin\Release\MeasureWaveforms.exe.config
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\bin\Release\MeasureWaveforms.exe
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\bin\Release\MeasureWaveforms.pdb
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.csprojResolveAssemblyReference.cache
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.csproj.ResolveComReference.cache
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.MeasureWaveforms.resources
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.Properties.Resources.resources
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.csproj.GenerateResource.Cache
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.exe
+C:\Users\ebrit\Desktop\MeasureWaveforms-master\MeasureWaveforms\obj\Release\MeasureWaveforms.pdb

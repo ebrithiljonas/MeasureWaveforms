@@ -8,13 +8,17 @@ namespace MeasureWaveforms
 {
     public class DataPoint
     {
-        public double inputFrequency { get; set; }
-        public double outputFrequency { get; set; }
+        public Double inputFrequency { get; set; }
+        public Double outputVoltage { get; set; }
+        public Double inputVoltage { get; set; }
+        public Double phase { get; set; }
 
-        public DataPoint(Double X, Double Y)
+        public DataPoint(Double X, Double Y, Double inputV, Double angle)
         {
             inputFrequency = X;
-            outputFrequency = Y;
+            outputVoltage = Y;
+            inputVoltage = inputV;
+            phase = angle;
         }
 
     }

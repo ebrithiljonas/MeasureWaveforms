@@ -2,7 +2,7 @@
 
 # Desciption
 
-Measure the peek to peek voltage (Vpp) over a defined range of frequencys with a frequency-generator and a DSO.
+Measure the RMS voltage and phase of the input and output signals over a defined range of frequencys with a frequency-generator and a DSO.
 
 # Devices
 - Frequency-Generator
